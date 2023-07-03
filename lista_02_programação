@@ -1,0 +1,581 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/tuleba1/tulepra/blob/main/lista_02_programa%C3%A7%C3%A3o\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1. Faça um Programa que peça dois números e imprima o maior deles."
+      ],
+      "metadata": {
+        "id": "juIx4wL70Dwv"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n1 = float(input('Digite um número:'))\n",
+        "n2 = float(input('Digite outro número: '))\n",
+        "if n1 > n2:\n",
+        "  print(n1)\n",
+        "else:\n",
+        "  print(n2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BxgrLQ7c0Dmv",
+        "outputId": "d98fb41b-94bb-437f-ae89-cfdbf2836449"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um número:10\n",
+            "Digite outro número: 5\n",
+            "10.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Faça um Programa que peça um valor e mostre na tela se o valor é positivo ou negativo."
+      ],
+      "metadata": {
+        "id": "oHTtsKkQ04BN"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "valor = float(input('Digite um valor positivo ou negativo: '))\n",
+        "if valor >= 0:\n",
+        "  print('Seu valor é positivo')\n",
+        "else:\n",
+        "  print('Seu valor é negativo')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ItDRaI9406CV",
+        "outputId": "6b0b64db-5cf6-4f50-aa47-0b965b852691"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um valor positivo ou negativo: -10\n",
+            "Seu valor é negativo\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Faça um Programa que verifique se uma letra digitada é \"F\" ou \"M\". Conforme a letra escrever: F -\n",
+        "Feminino, M - Masculino, Sexo Inválido."
+      ],
+      "metadata": {
+        "id": "TVX3Xflo1whj"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "letra = str(input('Digite \"F\" ou \"M\" para saber o sexo: '))\n",
+        "if letra == \"F\":\n",
+        "  print('É feminino')\n",
+        "elif letra == \"M\":\n",
+        "  print('É masculino')\n",
+        "else:\n",
+        "  print('Sexo inválido')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KHpJRq6y1z4D",
+        "outputId": "64085cdf-8c52-4d82-fd85-dd1845113779"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite \"F\" ou \"M\" para saber o sexo: M\n",
+            "É masculino\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Faça um Programa que peça para entrar com um ano com 4 dígitos e determine se o mesmo é ou não\n",
+        "bissexto."
+      ],
+      "metadata": {
+        "id": "yjjk02Do2cyZ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "ano = int(input('Digite um ano com 4 digitos para saber se é bissexto: '))\n",
+        "if (ano % 4 == 0 and ano % 100 != 0) or (ano % 400 == 0):\n",
+        "  print('É um ano bissexto')\n",
+        "else:\n",
+        "  print('Não é um ano bissexto')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "28rIg7U22Qlr",
+        "outputId": "87a605e7-411c-47d9-cda5-2c6470f0fdf7"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um ano com 4 digitos para saber se é bissexto: 2016\n",
+            "É um ano bissexto\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Faça um Programa que peça para entrar com um ano com 4 dígitos e determine se o mesmo é ou não\n",
+        "bissexto."
+      ],
+      "metadata": {
+        "id": "kp3mr2kZ3nje"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "letra = str(input('Digite uma letra para saber se é vogal ou consoante: '))\n",
+        "\n",
+        "#Analisando vogal#\n",
+        "if letra in ['a' , 'e' , 'i' , 'o' , 'u']:\n",
+        "  print(f'A letra {letra} é uma vogal')\n",
+        "#Analisando consoante#\n",
+        "else:\n",
+        "  print(f'A letra {letra} é uma consoante')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XeT6dfne3sol",
+        "outputId": "8b01c4fc-e309-4f27-c8f2-adec8041239e"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite uma letra para saber se é vogal ou consoante: a\n",
+            "A letra a é uma vogal\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Faça um Programa que leia três números e mostre-os em ordem decrescente."
+      ],
+      "metadata": {
+        "id": "8qtocTjq4f30"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n1 = float(input('Digite o primeiro número: '))\n",
+        "n2 = float(input('Digite o segundo número: '))\n",
+        "n3 = float(input('Digite o terceiro número: '))\n",
+        "if n1 > n2:\n",
+        "  if n2 > n3:\n",
+        "    print(f'A ordem decrescente é {n3 , n2 , n1}')\n",
+        "if n2 > n1:\n",
+        "  if n1 > n3:\n",
+        "    print(f'A ordem decrescente é {n3 , n1 ,n2}')\n",
+        "if n3 > n1:\n",
+        "  if n1 > n2:\n",
+        "    print(f'A ordem decrescente é {n2 , n1 , n3}')\n",
+        "if n3 > n2:\n",
+        "  if n2 > n1:\n",
+        "    print(f'A ordem decrescente é {n1 , n2 , n3}')\n",
+        "if n1 > n3:\n",
+        "  if n3 > n2:\n",
+        "    print(f'A ordem decrescente é {n2 , n3 , n1}')\n",
+        "if n2 > n3:\n",
+        "  if n3 > n1:\n",
+        "    print(f'A ordem decrescente é {n1 , n3 , n2}')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2hr5tnU64jLE",
+        "outputId": "d0637acc-8760-42b7-d202-fddb9ff91874"
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o primeiro número: 30\n",
+            "Digite o segundo número: 50\n",
+            "Digite o terceiro número: 40\n",
+            "A ordem decrescente é (30.0, 40.0, 50.0)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Faça um programa para a leitura de duas notas parciais de um aluno. O programa deve calcular a média\n",
+        "alcançada por aluno e apresentar:\n",
+        "o A mensagem \"Aprovado\", se a média alcançada for maior ou igual a sete;\n",
+        "o A mensagem \"Reprovado\", se a média for menor do que sete;\n",
+        "o A mensagem \"Aprovado com Distinção\", se a média for igual a dez."
+      ],
+      "metadata": {
+        "id": "Eyb3qLLc-FoX"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "m1 = float(input('Digite sua nota 1 : '))\n",
+        "m2 = float(input('Digite sua nota 2 : '))\n",
+        "media = (m1 + m2)/2\n",
+        "if media >= 7:\n",
+        "  print('Aprovado')\n",
+        "elif media < 7:\n",
+        "  print('Reprovado')\n",
+        "elif media == 10:\n",
+        "  print('Aprovado com distinção')\n",
+        "else:\n",
+        "  print('Não existe')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "bUhWiRhM-GJe",
+        "outputId": "9c817591-eba7-4a83-db27-94f91927b941"
+      },
+      "execution_count": 19,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite sua nota 1 : 8\n",
+            "Digite sua nota 2 : 6\n",
+            "Aprovado\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Faça um Programa que leia três números e mostre o maior deles."
+      ],
+      "metadata": {
+        "id": "YoFO7DzT-1Gc"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n1 = float(input('Digite o primeiro valor: '))\n",
+        "n2 = float(input('Digite o segundo valor: '))\n",
+        "n3 = float(input('Digite o terceiro valor: '))\n",
+        "\n",
+        "#reconhecendo os valores#\n",
+        "maior = n1\n",
+        "\n",
+        "if n2 > maior:\n",
+        "  maior = n2\n",
+        "\n",
+        "if n3 > maior:\n",
+        "  maior = n3\n",
+        "\n",
+        "print(f'O maior valor é {maior}')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "sgrQ-8DL-33E",
+        "outputId": "3939074f-dd7d-48a6-c03c-1d419916ef86"
+      },
+      "execution_count": 22,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o primeiro valor: 5\n",
+            "Digite o segundo valor: 1\n",
+            "Digite o terceiro valor: 20\n",
+            "O maior valor é 20.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Faça um Programa que leia três números e mostre o maior e o menor deles."
+      ],
+      "metadata": {
+        "id": "X1ExiR-P_j7q"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n1 = float(input('Digite o primeiro valor: '))\n",
+        "n2 = float(input('Digite o segundo valor: '))\n",
+        "n3 = float(input('Digite o terceiro valor: '))\n",
+        "\n",
+        "maior = n1\n",
+        "\n",
+        "if n2 > maior:\n",
+        "  maior = n2\n",
+        "if n3 > maior:\n",
+        "  maior = n3\n",
+        "\n",
+        "menor = n1\n",
+        "if n2 < menor:\n",
+        "  menor = n2\n",
+        "if n3 < menor:\n",
+        "  menor = n3\n",
+        "\n",
+        "print(f'O maior número é o {maior} e o menor é {menor}')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xQxcoieNAJ5Z",
+        "outputId": "166efe25-2e07-4fd5-b391-e5396da072ec"
+      },
+      "execution_count": 23,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o primeiro valor: 50\n",
+            "Digite o segundo valor: 22\n",
+            "Digite o terceiro valor: 15\n",
+            "O maior número é o 50.0 e o menor é 15.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar,\n",
+        "sabendo que a decisão é sempre pelo mais barato."
+      ],
+      "metadata": {
+        "id": "WqGo0r7LBHQX"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "preco1 = float(input(\"Digite o preço do primeiro produto: \"))\n",
+        "preco2 = float(input(\"Digite o preço do segundo produto: \"))\n",
+        "preco3 = float(input(\"Digite o preço do terceiro produto: \"))\n",
+        "\n",
+        "if preco1 < preco2 and preco1 < preco3:\n",
+        "    print(\"Você deve comprar o primeiro produto.\")\n",
+        "elif preco2 < preco1 and preco2 < preco3:\n",
+        "    print(\"Você deve comprar o segundo produto.\")\n",
+        "else:\n",
+        "    print(\"Você deve comprar o terceiro produto.\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qrBtE29HBOIy",
+        "outputId": "00c85d3b-8aed-48b4-fab5-d257772cbbe9"
+      },
+      "execution_count": 24,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o preço do primeiro produto: 50\n",
+            "Digite o preço do segundo produto: 25\n",
+            "Digite o preço do terceiro produto: 60\n",
+            "Você deve comprar o segundo produto.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Faça um Programa que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-\n",
+        "Vespertino ou N- Noturno. Imprima a mensagem \"Bom Dia!\", \"Boa Tarde!\" ou \"Boa Noite!\" ou \"Valor\n",
+        "\n",
+        "Inválido!\", conforme o caso."
+      ],
+      "metadata": {
+        "id": "VIoGMnvjC6Vd"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "turno = input(\"Em qual turno você estuda? Digite M para matutino, V para vespertino ou N para noturno: \")\n",
+        "\n",
+        "if turno == \"M\":\n",
+        "    print(\"Bom dia!\")\n",
+        "elif turno == \"V\":\n",
+        "    print(\"Boa tarde!\")\n",
+        "elif turno == \"N\":\n",
+        "    print(\"Boa noite!\")\n",
+        "else:\n",
+        "    print(\"Valor inválido!\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UzXjJHBKC-eq",
+        "outputId": "e4ac7a50-7ca1-45fd-a33c-9ae2bfc6e6f8"
+      },
+      "execution_count": 25,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Em qual turno você estuda? Digite M para matutino, V para vespertino ou N para noturno: V\n",
+            "Boa tarde!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "As Organizações Tabajara resolveram dar um aumento de salário aos seus colaboradores e lhe contraram\n",
+        "para desenvolver o programa que calculará os reajustes.\n",
+        "o Faça um programa que recebe o salário de um colaborador e o reajuste segundo o seguinte\n",
+        "critério, baseado no salário atual:\n",
+        "o salários até R$ 280,00 (incluindo) : aumento de 20%\n",
+        "o salários entre R$ 280,00 e R$ 700,00 : aumento de 15%\n",
+        "o salários entre R$ 700,00 e R$ 1500,00 : aumento de 10%\n",
+        "o salários de R$ 1500,00 em diante : aumento de 5% Após o aumento ser realizado, informe na\n",
+        "tela:\n",
+        "o o salário antes do reajuste;\n",
+        "o o percentual de aumento aplicado;\n",
+        "o o valor do aumento;\n",
+        "o o novo salário, após o aumento."
+      ],
+      "metadata": {
+        "id": "ausc5utaDEti"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "salario_atual = float(input(\"Digite o salário atual do colaborador: \"))\n",
+        "\n",
+        "if salario_atual <= 280.00:\n",
+        "    percentual_aumento = 20\n",
+        "elif salario_atual <= 700.00:\n",
+        "    percentual_aumento = 15\n",
+        "elif salario_atual <= 1500.00:\n",
+        "    percentual_aumento = 10\n",
+        "else:\n",
+        "    percentual_aumento = 5\n",
+        "\n",
+        "valor_aumento = salario_atual * percentual_aumento / 100\n",
+        "novo_salario = salario_atual + valor_aumento\n",
+        "\n",
+        "print(f\"Salário antes do reajuste: R$ {salario_atual:.2f}\")\n",
+        "print(f\"Percentual de aumento aplicado: {percentual_aumento}%\")\n",
+        "print(f\"Valor do aumento: R$ {valor_aumento:.2f}\")\n",
+        "print(f\"Novo salário após o aumento: R$ {novo_salario:.2f}\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Mn3vnF77DPyI",
+        "outputId": "8a199f8e-e1f2-48cd-b9cd-8086d94001c8"
+      },
+      "execution_count": 26,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o salário atual do colaborador: 1800\n",
+            "Salário antes do reajuste: R$ 1800.00\n",
+            "Percentual de aumento aplicado: 5%\n",
+            "Valor do aumento: R$ 90.00\n",
+            "Novo salário após o aumento: R$ 1890.00\n"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Damos-lhe as boas-vindas ao Colaboratory",
+      "toc_visible": true,
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
